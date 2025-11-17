@@ -1,0 +1,403 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    :root {
+        --verde-escuro: #3a5a40; 
+        --verde-medio: #588157;
+        --verde-claro: #a3b18a; 
+        --creme: #f4f1de;       
+        --branco-off: #fdfefc;
+        --preto-texto: #212529;
+        --amarelo-economico: #D4A017; 
+        
+        /* Fontes */
+        --font-titulo: 'League Spartan', sans-serif; 
+        --font-corpo: 'Montserrat', sans-serif;     
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-corpo); 
+        line-height: 1.7;
+        background-color: var(--branco-off);
+        color: var(--preto-texto);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-titulo); 
+        color: var(--verde-escuro);
+        font-weight: 700;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    section {
+        padding: 5rem 0;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: -1rem;
+        margin-bottom: 3rem;
+        color: var(--verde-medio);
+    }
+
+    /* --- Header / Navegação --- */
+    header {
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    .logo img {
+        height: 70px; /* Mantido em 70px */
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-links li {
+        margin-left: 2.5rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--verde-medio);
+        font-weight: 600;
+        font-size: 1.1rem; /* Mantido em 1.1rem */
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--verde-escuro);
+    }
+
+    /* --- Burger Menu (para mobile) --- */
+    .burger {
+        display: none;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--verde-escuro);
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* --- Seção Hero --- */
+    #hero {
+        background-color: var(--creme);
+        padding: 3rem 0;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .hero-text h1 {
+        font-size: 3.8rem; /* Mantido em 3.8rem, agora é League Spartan */
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+        color: var(--verde-medio);
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .cta-button {
+        background-color: var(--verde-escuro);
+        color: #fff;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        font-family: var(--font-titulo); /* Adicionado League Spartan ao botão */
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .cta-button:hover {
+        background-color: var(--verde-medio);
+        transform: translateY(-3px);
+    }
+
+    /* --- Seção Projeto --- */
+    #projeto {
+        background: #fff;
+    }
+    .projeto-content {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+    .projeto-text {
+        flex: 2;
+    }
+    .projeto-illustration {
+        flex: 1;
+        text-align: center;
+    }
+    .projeto-illustration img {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    /* --- Seção Tripé --- */
+    #tripe {
+        background-color: var(--branco-off);
+    }
+
+    .tripe-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .card-tripe {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border-top: 6px solid;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-tripe:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    .card-tripe.ambiental { border-color: var(--verde-medio); }
+    .card-tripe.social { border-color: var(--verde-claro); }
+    .card-tripe.economico { border-color: var(--amarelo-economico); }
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .card-header img {
+        height: 40px;
+    }
+
+    .card-header h3 {
+        font-size: 1.6rem;
+        color: var(--verde-escuro);
+        /* Já herda League Spartan de h3 */
+    }
+
+    .card-body {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .card-body ul {
+        list-style: none;
+    }
+
+    .card-body li {
+        position: relative;
+        padding-left: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-body li::before {
+        content: '🌿';
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 1rem;
+    }
+
+    /* --- Seção Rede de Apoio --- */
+    #rede-apoio {
+        background: var(--creme);
+        text-align: center;
+    }
+
+    #rede-apoio p {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+
+    /* --- Seção Conclusão --- */
+    #conclusao {
+        background: var(--verde-escuro);
+        color: #fff;
+    }
+
+    #conclusao h2 {
+        color: #fff;
+        /* Já herda League Spartan de h2 */
+    }
+
+    #conclusao p {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+        background: #222;
+        color: var(--creme);
+        padding: 3rem 0;
+        text-align: center;
+    }
+
+    footer p {
+        margin-bottom: 0.5rem;
+    }
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    /* --- Responsividade (Mobile) --- */
+    @media (max-width: 1024px) {
+        .tripe-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h2 { font-size: 2.2rem; }
+
+        .nav-links {
+            position: fixed;
+            right: 0;
+            top: 80px; /* Altura do header */
+            background: #fff;
+            height: calc(100vh - 80px);
+            width: 60%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 3rem;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+            box-shadow: -5px 0 10px rgba(0,0,0,0.05);
+        }
+        
+        .nav-links li {
+            margin-left: 0;
+            margin-bottom: 2rem;
+            opacity: 0;
+        }
+
+        .burger {
+            display: block;
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+        }
+
+        /* Animação dos links */
+        .nav-active li {
+            opacity: 1;
+            transition: opacity 0.5s ease 0.2s;
+        }
+
+        .hero-content {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero-image img {
+            max-width: 300px;
+        }
+        
+        .projeto-content {
+            flex-direction: column;
+        }
+    }
+
+    .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+    .toggle .line2 { opacity: 0; }
+    .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
